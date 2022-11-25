@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 9",
+	"properties": {
+		"content": {
+			"query": "SELECT COUNT(*) FROM FactSale   ",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "Database1",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

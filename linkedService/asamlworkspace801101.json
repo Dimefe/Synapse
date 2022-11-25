@@ -1,0 +1,18 @@
+{
+	"name": "asamlworkspace801101",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureMLService",
+		"typeProperties": {
+			"subscriptionId": "f43f70f1-af80-4cd6-8ee6-e2f20bd5a8bf",
+			"resourceGroupName": "Synapse-AIAD-801101",
+			"mlWorkspaceName": "asamlworkspace801101",
+			"authentication": "MSI"
+		},
+		"connectVia": {
+			"referenceName": "AutoResolveIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

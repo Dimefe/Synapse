@@ -1,0 +1,22 @@
+{
+	"name": "database1",
+	"properties": {
+		"Name": "database1",
+		"EntityType": "DATABASE",
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"Properties": {
+			"IsSyMSCDMDatabase": true
+		},
+		"Source": {
+			"Provider": "ADLS",
+			"Location": "abfss://database1@asadatalake801101.dfs.core.windows.net/fact-sale",
+			"Properties": {
+				"FormatType": "parquet",
+				"LinkedServiceName": "asadatalake01"
+			}
+		}
+	},
+	"type": "DATABASE"
+}

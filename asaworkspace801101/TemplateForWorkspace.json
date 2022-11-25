@@ -8876,7 +8876,7 @@
 						"language": "sql"
 					},
 					"currentConnection": {
-						"databaseName": "database1",
+						"databaseName": "Database1",
 						"poolName": "Built-in"
 					},
 					"resultLimit": 5000
@@ -10315,6 +10315,110 @@
 						"ActionType": "CREATE",
 						"OldEntity": null,
 						"NewEntity": {
+							"Name": "Customer",
+							"EntityType": "TABLE",
+							"Namespace": {
+								"DatabaseName": "database1"
+							},
+							"Description": "",
+							"TableType": "EXTERNAL",
+							"Origin": {
+								"Type": "SPARK"
+							},
+							"StorageDescriptor": {
+								"Columns": [
+									{
+										"Name": "CustomerId",
+										"OriginDataTypeName": {
+											"TypeName": "integer",
+											"IsComplexType": false,
+											"IsNullable": false,
+											"Properties": {
+												"HIVE_TYPE_STRING": "integer"
+											}
+										},
+										"DeltaFormatInvalidMessages": []
+									},
+									{
+										"Name": "FirstName",
+										"Description": "",
+										"OriginDataTypeName": {
+											"TypeName": "string",
+											"IsComplexType": false,
+											"IsNullable": false,
+											"Length": 256,
+											"Properties": {
+												"HIVE_TYPE_STRING": "string"
+											}
+										},
+										"DeltaFormatInvalidMessages": []
+									},
+									{
+										"Name": "LastName",
+										"Description": "",
+										"OriginDataTypeName": {
+											"TypeName": "string",
+											"IsComplexType": false,
+											"IsNullable": false,
+											"Length": 256,
+											"Properties": {
+												"HIVE_TYPE_STRING": "string"
+											}
+										},
+										"DeltaFormatInvalidMessages": []
+									}
+								],
+								"Format": {
+									"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+									"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+									"FormatType": "csv",
+									"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+									"Properties": {
+										"path": "abfss://database1-staging@asadatalake801101.dfs.core.windows.net/*",
+										"delimiter": ",",
+										"multiLine": "false",
+										"firstRowAsHeader": "false",
+										"serialization.format": "1",
+										"escape": "\\",
+										"quote": "\"",
+										"FormatTypeSetToDatabaseDefault": false,
+										"header": "false"
+									}
+								},
+								"Source": {
+									"Provider": "ADLS",
+									"Location": "abfss://database1-staging@asadatalake801101.dfs.core.windows.net/*",
+									"Properties": {
+										"LinkedServiceName": "asadatalake01",
+										"LocationSetToDatabaseDefault": false
+									}
+								},
+								"Properties": {
+									"textinputformat.record.delimiter": ",",
+									"compression": "{\"type\":\"None\",\"level\":\"optimal\"}",
+									"derivedModelAttributeInfo": "{\"attributeReferences\":{}}"
+								},
+								"Compressed": false,
+								"IsStoredAsSubdirectories": false
+							},
+							"Properties": {
+								"Description": "",
+								"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
+								"PrimaryKeys": "CustomerId",
+								"spark.sql.sources.provider": "csv"
+							},
+							"Retention": 0,
+							"Temporary": false,
+							"IsRewriteEnabled": false
+						},
+						"Source": {
+							"Type": "SPARK"
+						}
+					},
+					{
+						"ActionType": "CREATE",
+						"OldEntity": null,
+						"NewEntity": {
 							"Name": "FactSale",
 							"EntityType": "TABLE",
 							"Namespace": {
@@ -10337,7 +10441,8 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										}
+										},
+										"DeltaFormatInvalidMessages": []
 									},
 									{
 										"Name": "CustomerId",
@@ -10348,7 +10453,8 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "integer"
 											}
-										}
+										},
+										"DeltaFormatInvalidMessages": []
 									},
 									{
 										"Name": "ProductId",
@@ -10359,7 +10465,8 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "short"
 											}
-										}
+										},
+										"DeltaFormatInvalidMessages": []
 									},
 									{
 										"Name": "Quantity",
@@ -10370,7 +10477,8 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "short"
 											}
-										}
+										},
+										"DeltaFormatInvalidMessages": []
 									},
 									{
 										"Name": "Price",
@@ -10383,7 +10491,8 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "decimal"
 											}
-										}
+										},
+										"DeltaFormatInvalidMessages": []
 									},
 									{
 										"Name": "TotalAmount",
@@ -10396,7 +10505,8 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "decimal"
 											}
-										}
+										},
+										"DeltaFormatInvalidMessages": []
 									},
 									{
 										"Name": "TransactionDate",
@@ -10407,7 +10517,8 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "integer"
 											}
-										}
+										},
+										"DeltaFormatInvalidMessages": []
 									},
 									{
 										"Name": "ProfitAmount",
@@ -10420,7 +10531,8 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "decimal"
 											}
-										}
+										},
+										"DeltaFormatInvalidMessages": []
 									},
 									{
 										"Name": "Hour",
@@ -10431,7 +10543,8 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "short"
 											}
-										}
+										},
+										"DeltaFormatInvalidMessages": []
 									},
 									{
 										"Name": "Minute",
@@ -10442,7 +10555,8 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "short"
 											}
-										}
+										},
+										"DeltaFormatInvalidMessages": []
 									},
 									{
 										"Name": "StoreId",
@@ -10453,7 +10567,8 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "short"
 											}
-										}
+										},
+										"DeltaFormatInvalidMessages": []
 									},
 									{
 										"Name": "day",
@@ -10465,7 +10580,8 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "integer"
 											}
-										}
+										},
+										"DeltaFormatInvalidMessages": []
 									}
 								],
 								"Format": {

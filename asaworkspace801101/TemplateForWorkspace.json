@@ -8871,12 +8871,12 @@
 			"apiVersion": "2019-06-01-preview",
 			"properties": {
 				"content": {
-					"query": "SELECT COUNT(*) FROM FactSale",
+					"query": "SELECT TOP (100) [CustomerId] \n,[FirstName] \n,[LastName] \nFROM [Database1].[dbo].[Customer]",
 					"metadata": {
 						"language": "sql"
 					},
 					"currentConnection": {
-						"databaseName": "Database1",
+						"databaseName": "database1",
 						"poolName": "Built-in"
 					},
 					"resultLimit": 5000
@@ -10336,8 +10336,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "integer"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "FirstName",
@@ -10350,8 +10349,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "LastName",
@@ -10364,8 +10362,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									}
 								],
 								"Format": {
@@ -10376,8 +10373,8 @@
 									"Properties": {
 										"path": "abfss://database1-staging@asadatalake801101.dfs.core.windows.net/*",
 										"delimiter": ",",
-										"multiLine": "false",
 										"firstRowAsHeader": "false",
+										"multiLine": "false",
 										"serialization.format": "1",
 										"escape": "\\",
 										"quote": "\"",
@@ -10441,8 +10438,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "string"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "CustomerId",
@@ -10453,8 +10449,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "integer"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "ProductId",
@@ -10465,8 +10460,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "short"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "Quantity",
@@ -10477,8 +10471,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "short"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "Price",
@@ -10491,8 +10484,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "decimal"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "TotalAmount",
@@ -10505,8 +10497,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "decimal"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "TransactionDate",
@@ -10517,8 +10508,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "integer"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "ProfitAmount",
@@ -10531,8 +10521,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "decimal"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "Hour",
@@ -10543,8 +10532,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "short"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "Minute",
@@ -10555,8 +10543,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "short"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "StoreId",
@@ -10567,8 +10554,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "short"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									},
 									{
 										"Name": "day",
@@ -10580,8 +10566,7 @@
 											"Properties": {
 												"HIVE_TYPE_STRING": "integer"
 											}
-										},
-										"DeltaFormatInvalidMessages": []
+										}
 									}
 								],
 								"Format": {

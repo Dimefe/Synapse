@@ -7,8 +7,8 @@
 				"language": "sql"
 			},
 			"currentConnection": {
-				"databaseName": "SQLOnDemand01",
-				"poolName": "Built-in"
+				"databaseName": "SQLPool01",
+				"poolName": "SQLPool01"
 			},
 			"resultLimit": 5000
 		},
